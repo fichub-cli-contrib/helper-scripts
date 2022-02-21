@@ -16,7 +16,7 @@ python helper_script_name.py
 
 # Usage & Examples
 
-Info about all the scripts can be found in the [Wiki](https://github.com/fichub-cli-contrib/helper-scripts/wiki/Scripts)
+Info about all the scripts can be found in their respective directory.
 
 # Links
 
