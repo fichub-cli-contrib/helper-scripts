@@ -11,7 +11,7 @@ To report issues for the CLI, open an issue at https://github.com/FicHub/fichub-
 Download the scripts and run using:
 
 ```
-python helper_script_name.py
+python3 helper_script_name.py
 ```
 
 # Usage & Examples
