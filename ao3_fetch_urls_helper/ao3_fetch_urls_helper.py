@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from time import sleep
+from random import randint
 import sys
 import argparse
 import re
@@ -32,7 +34,11 @@ To report issues, open an issue at https://github.com/fichub-cli-contrib/helper-
     parser.add_argument("--start", type=int,
                         help="Starting page number", default=1)
 
-    parser.add_argument("--end", type=int, help="Ending page number")
+    parser.add_argument("--end", type=int, default=1,
+                        help="Ending page number")
+
+    parser.add_argument("--user-contact", type=str, default=None,
+                        help="Contact email ID for user-agent. This ensures AO3 can contact you directly if there are any issues.")
 
     parser.add_argument("-d", "--debug", action='store_true',
                         help="Show the log in the console for debugging")
@@ -56,20 +62,20 @@ def main(argv=None):
         sys.exit(1)
 
     if args.version is True:
-        print("ao3_fetch_urls_helper: v0.1")
+        print("ao3_fetch_urls_helper: v0.2")
         sys.exit(0)
 
     # clean the url
     curr_url = args.url.replace('\\', '')
 
     for i in range(args.start, args.end+1):
-
         # replace the page number in url with start pg no.
         curr_url = re.sub(r"page=\d+", f"page={i}", curr_url)
         next_url = re.sub(r"page=\d+", f"page={i+1}", curr_url)
 
         fic = FetchData(debug=args.debug)
-        fic.fetch_urls_from_page(curr_url)
+        sleep(randint(1, 5))  # random delay between each request
+        fic.fetch_urls_from_page(curr_url, args.user_contact)
         curr_url = next_url  # update the curr url
 
 

@@ -66,13 +66,14 @@ A helper script for the '--fetch-urls' option of fichub_cli's metadata plugin wh
 To report issues, open an issue at https://github.com/fichub-cli-contrib/helper-scripts/issues
 
 optional arguments:
--h, --help show this help message and exit
--u URL, --url URL Input url (The url should contain 'page=' for the regex to work)
---start START Starting page number
---end END Ending page number
--d, --debug Show the log in the console for debugging
---version Display version & quit
-
+  -h, --help            show this help message and exit
+  -u URL, --url URL     Input url (The url should contain 'page=' for the regex to work)
+  --start START         Starting page number
+  --end END             Ending page number
+  --user-contact USER_CONTACT
+                        Contact email ID for user-agent. Prevents IP bans since AO3 can contact you directly if there are any issues.
+  -d, --debug           Show the log in the console for debugging
+  --version             Display version & quit
 ```
 
 ---
@@ -85,6 +86,8 @@ optional arguments:
 
 - The starting page will be 1 by default unless specified with `--start`
 
+- You can opt-out of not using `--user-contact` for your requests even though we advise that you should since this will ensure that if AO3 has any issues with the amount of requests you are sending, they can directly contact you to resolve the issue.
+
 ---
 
 ## Example
@@ -93,7 +96,7 @@ optional arguments:
 
 ```
 
-python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --end 5
+python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --end 5 --user-contact example@gmail.com
 
 ```
 
@@ -101,7 +104,7 @@ python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carniv
 
 ```
 
-python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --start 2 --end 5
+python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --start 2 --end 5 --user-contact example@gmail.com
 
 ```
 
