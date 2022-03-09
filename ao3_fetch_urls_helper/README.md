@@ -8,13 +8,9 @@ To report issues, open an issue at https://github.com/fichub-cli-contrib/helper-
 
 ## Dependencies
 
----
-
 This script depends on the [fichub-cli-metadata](https://github.com/fichub-cli-contrib/fichub-cli-metadata) plugin so it needs to be installed in the python environment.
 
 ## Download
-
----
 
 There are many ways to download the script:
 
@@ -34,7 +30,6 @@ wget https://raw.githubusercontent.com/fichub-cli-contrib/helper-scripts/main/ao
 
 ```
 curl -O https://raw.githubusercontent.com/fichub-cli-contrib/helper-scripts/main/ao3_fetch_urls_helper/ao3_fetch_urls_helper.py
-
 ```
 
 - From within the browser:
@@ -44,18 +39,13 @@ curl -O https://raw.githubusercontent.com/fichub-cli-contrib/helper-scripts/main
 
 ## Run
 
----
-
 ```
-
 python3 ao3_fetch_urls_helper.py
-
 ```
 
 # Usage
 
 ```
-
 > python3 ao3_fetch_urls_helper.py
 > usage: ao3-fetch-urls-helper [-h] [-u URL] [--start START] [--end END] [-d]
 
@@ -95,24 +85,16 @@ optional arguments:
 - To fetch urls with ending page number as 5 (Starting page number will be 1 by default).
 
 ```
-
 python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --end 5 --user-contact example@gmail.com
-
 ```
 
 - To fetch urls with starting page number as 2 & ending page number as 5
 
 ```
-
 python3 ao3_fetch_urls_helper.py -u https://archiveofourown.org/users/The_Carnivorous_Muffin/works --start 2 --end 5 --user-contact example@gmail.com
-
 ```
 
 # Links
 
 - [Fichub-cli](https://github.com/FicHub/fichub-cli/)
 - [Official Discord Server](https://discord.gg/sByBAhX)
-
-```
-
-```
