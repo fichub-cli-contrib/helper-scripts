@@ -140,8 +140,6 @@ def txt_file_parser(filename, debug):
 
 def main(argv=None):
 
-    print(sys.argv)
-
     if argv is None:
         argv = sys.argv[1:]
 
