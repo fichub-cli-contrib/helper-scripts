@@ -5,11 +5,6 @@ A helper script for the `--fetch-urls` option of fichub_cli's metadata plugin wh
 To report issues, open an issue at https://github.com/fichub-cli-contrib/helper-scripts/issues
 
 # Installation
-
-## Dependencies
-
-This script depends on the [fichub-cli-metadata](https://github.com/fichub-cli-contrib/fichub-cli-metadata) plugin so it needs to be installed in the python environment.
-
 ## Download
 
 There are many ways to download the script:
